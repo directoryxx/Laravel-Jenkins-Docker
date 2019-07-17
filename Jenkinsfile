@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
-
+agent {
+            dockerfile true
+}
+        
 node('master') {
     try {
-        agent {
-            dockerfile true
-        }
         stage('build') {
             checkout scm
 
